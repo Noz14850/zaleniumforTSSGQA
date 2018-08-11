@@ -1,5 +1,3 @@
-// yeah, yeah.  Lyle Hodgson yadda yadda.
-
 package com.tssgqa.zaleniumdemo;
 
 import org.openqa.selenium.remote.DesiredCapabilities;

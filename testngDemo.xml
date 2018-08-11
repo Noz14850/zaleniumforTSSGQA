@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test 1 for Zalenium parallel testing" parallel="true" thread-count="8">
+    <test name="Z Firefox test cases" group-by-instances="false">
+        <parameter name = "browserToUse" value = "firefox" />
+        <!-- next param is just for "quasi-logging" during run,
+        to make it clearer what's being run when -->
+        <parameter name = "tngTestName" value = "Z Firefox test cases" />
+        <classes>
+            <class name = "com.tssgqa.zaleniumdemo.NotMuchAsTestsGo">
+                <!-- often methods are not spelled out - use if you want to
+                run just a subset of the test cases -->
+                <methods>
+                    <include name = "firstTestWillPass" />
+                    <include name = "secondTestWillFail" />
+                    <include name = "thirdTestWillPass" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Z Chrome test cases" group-by-instances="false">
+        <parameter name = "browserToUse" value = "chrome" />
+        <parameter name = "tngTestName" value = "Z Chrome test cases" />
+        <classes>
+            <class name = "com.tssgqa.zaleniumdemo.NotMuchAsTestsGo" />
+        </classes>
+    </test>
+    <test name="2nd Z Firefox test cases" group-by-instances="false">
+        <parameter name = "browserToUse" value = "firefox" />
+        <parameter name = "tngTestName" value = "2nd Z Firefox test cases" />
+        <classes>
+            <class name = "com.tssgqa.zaleniumdemo.NotMuchAsTestsGo" />
+        </classes>
+    </test>
+    <test name="2nd Z Chrome test cases" group-by-instances="false">
+        <parameter name = "browserToUse" value = "chrome" />
+        <parameter name = "tngTestName" value = "2nd Z Chrome test cases" />
+        <classes>
+            <class name = "com.tssgqa.zaleniumdemo.NotMuchAsTestsGo" />
+        </classes>
+    </test>
+</suite>

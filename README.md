@@ -10,7 +10,7 @@ Docker commands for running Zalenium:
 
 	setup:
 		install docker:  https://docs.docker.com/engine/installation/
-		once installed: 
+		once installed:
 			start Docker Quickstart Terminal
 				*** the IP that Docker starts up with is specified in DQT as soon as you start up
 					- you'll want this later, so note it!
@@ -57,16 +57,16 @@ Docker commands for running Zalenium:
 		https://opensource.zalando.com/zalenium/#usage
 		http://<DOCKER IP - SEE ABOVE>:4444/dashboard/  // Zalenium dashboard - from here you can replay videos of your tests
 		http://<DOCKER IP - SEE ABOVE>:4444/grid/admin/live  // Zalenium "Live Preview" - watch your tests run - click "Interact via VNC" to interact with container
-		
+
 
 For those of you not already familiar with TestNG:
 
 	http://testng.org/doc/index.html
 	https://github.com/cbeust/testng/
 	IntelliJ issues with TestNG: 
-		https://youtrack.jetbrains.com/issues?q=%23%7BUnit%20Testing.%20TestNG%7D%20
-  https://stackoverflow.com/search?q=testng
-  
+			https://youtrack.jetbrains.com/issues?q=%23%7BUnit%20Testing.%20TestNG%7D%20
+	  https://stackoverflow.com/search?q=testng
+
 	methods: the order of processing:
 		@BeforeTest
 		@BeforeClass
@@ -99,7 +99,7 @@ Uhhhh do you need to know my versions as of this very instant?
 	VirtualBox:  5.2.8 r121009 (Qt5.6.2)
 	Docker:  18.03.0-ce, build 0520e24302
 	elgalu/selenium image:  3.13.0-p3
-        dosel zalenium image:  3.13.0b
+  dosel zalenium image:  3.13.0b
 	sheesh what else? current version of my TV's OS: 1200 ...?  
 
 Surely that's enough to get you guys up and running (those of you with enough RAM to spare).

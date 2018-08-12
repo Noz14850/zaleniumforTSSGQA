@@ -21,17 +21,17 @@ Docker commands for running Zalenium
 				docker pull dosel/zalenium
 
 	starting: command:
-		docker run 
-			--rm 
-			-ti 
-			--name zalenium 
-			-p 4444:4444     
-			-v /var/run/docker.sock:/var/run/docker.sock     
-			-v /tmp/videos:/home/seluser/videos     
-			--privileged dosel/zalenium 
+		docker run \
+			--rm \
+			-ti \
+			--name zalenium \
+			-p 4444:4444 \    
+			-v /var/run/docker.sock:/var/run/docker.sock \    
+			-v /tmp/videos:/home/seluser/videos \    
+			--privileged dosel/zalenium \
 			start --timeZone "America/New_York"
 
-			(optional: --desiredContainers 4  // defaults to 2 anyway)
+			(optional: --desiredContainers 4  // defaults to 2 anyway and, being Zalenium, expands)
 
 	Zalenium uses Docker, which starts VirtualBox, which you may need to edit the settings of to get things to *really* run.
 		use VirtualBox interface (under Oracle), 
@@ -89,6 +89,7 @@ For those of you not already familiar with TestNG:
 		</classes>
 		</test>
 		</suite>
+	to run, Run the testng.xml file, do not run from within the class of test cases
 
 Uhhhh do you need to know my versions as of this instant?
 
